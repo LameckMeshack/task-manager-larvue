@@ -12,6 +12,19 @@ use Illuminate\Support\Facades\Validator;
 class UserTaskController extends BaseController
 {
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $userTasks = UserTask::all();
+
+        return $this->sendResponse(UserTaskResource::collection($userTasks), 'Tasks retrieved successfully.');
+    }
+
+
+    /**
      * Store a newly created UserTask in storage.
      *
      * @param  \Illuminate\Http\Request  $request
