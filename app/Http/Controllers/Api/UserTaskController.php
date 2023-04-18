@@ -1,14 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Http\Resources\UserTaskResource;
 use App\Models\UserTask;
+use App\Http\Controllers\Api\BaseController as BaseController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 
-class UserTaskController extends Controller
+class UserTaskController extends BaseController
 {
     /**
      * Store a newly created UserTask in storage.
@@ -24,8 +25,8 @@ class UserTaskController extends Controller
             'user_id' => 'required|integer',
             'task_id' => 'required|integer',
             'due_date' => 'required|date',
-            'start_time' => 'required|date_format:H:i:s',
-            'end_time' => 'required|date_format:H:i:s',
+            'start_time' => 'required|date',
+            'end_time' => 'required|date',
             'remark' => 'nullable|string',
             'status_id' => 'required|integer',
         ]);
