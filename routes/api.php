@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\StatusController;
 use App\Http\Controllers\Api\TaskController;
+use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\UserTaskController;
 
 /*
@@ -40,4 +41,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::resource('tasks', TaskController::class);
     Route::resource('usertasks', UserTaskController::class);
     Route::resource('status', StatusController::class);
+    Route::resource('users', UserController::class);
 });
