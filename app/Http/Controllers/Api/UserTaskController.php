@@ -68,8 +68,8 @@ class UserTaskController extends BaseController
             'user_id' => 'nullable|integer',
             'task_id' => 'nullable|integer',
             'due_date' => 'nullable|date',
-            'start_time' => 'nullable|date_format:H:i:s',
-            'end_time' => 'nullable|date_format:H:i:s',
+            'start_time' => 'nullable|date',
+            'end_time' => 'nullable|date',
             'remark' => 'nullable|string',
             'status_id' => 'nullable|integer',
         ]);
